@@ -1,5 +1,7 @@
 package shop;
 
+import java.util.Arrays;
+
 public abstract class Customer extends Person{
     private Clothing[] clothingItems;
     private char size;
@@ -9,5 +11,12 @@ public abstract class Customer extends Person{
         return size;
     }
 
-    //MAKE toString();
+    @Override
+    public String toString() {
+        return "Customer{" +
+                "clothingItems=" + Arrays.toString(clothingItems) +
+                ", size=" + size +
+                ", clothing=" + clothing +
+                '}';
+    }
 }

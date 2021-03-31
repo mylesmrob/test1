@@ -1,6 +1,5 @@
 package shop;
 
-import javax.xml.namespace.QName;
 import java.util.ArrayList;
 
 public class Main {
@@ -29,14 +28,18 @@ public class Main {
         manager.printEmpPriceAfterDisc(clothingB);
 
         ArrayList<Clothing> clothing = new ArrayList<>();
+
         clothing.add(clothingA); clothing.add(clothingB); clothing.add(clothingC);
         for(Clothing c : clothing){
             System.out.println(c.getDescription());
         }
-
+        System.out.println("Before");
+        System.out.println(clothing.toString());
+        System.out.println("After");
+        ShopApp.sortAndPrintClothingByPrice(clothing);
         ShopApp.printEmployeeName(manager);
         ShopApp.printEmployeeName(hourlyEmployee);
 
-        ShopApp.sortAndPrintClothingByPrice(clothing);
+
     }
 }

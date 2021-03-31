@@ -22,4 +22,11 @@ public class Clothing {
     public char getSize(){
         return size;
     }
+
+    @Override
+    public String toString() {
+        return description + '\'' +
+                ", price=" + price +
+                '}';
+    }
 }
